@@ -95,7 +95,7 @@
               <div class="shop-name bg-white w-min p-1 rounded-lg">
                 ShopEase
               </div>
-              <div class="card-title py-2">Fix Mobile Button Issue</div>
+              <div id="task-name" class="card-title py-2">Fix Mobile Button Issue</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Ensure the button is visible, clickable, properly styled, has touch support,
                  and is not blocked by elements.
@@ -107,7 +107,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="mobile-button"
-                  onclick="updatePoint()"
+                  onclick="updatePoint(); addHistory();" 
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -132,7 +132,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="dark-mode"
-                  onclick="updatePoint()"
+                  onclick="updatePoint(); addHistory();"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -157,7 +157,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="optimize-home-page"
-                  onclick="updatePoint()"
+                  onclick="updatePoint(); addHistory();"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -182,7 +182,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="add-emoji"
-                  onclick="updatePoint()"
+                  onclick="updatePoint(); addHistory();"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -207,7 +207,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="integrate-api"
-                  onclick="updatePoint()"
+                  onclick="updatePoint(); addHistory();"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -232,7 +232,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="improve-searching"
-                  onclick="updatePoint()"
+                  onclick="updatePoint(); addHistory();"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -249,11 +249,12 @@
             <img class="h-[24px] w-[24px]" src="./assets/activity.png" alt="" />
             <p>Activity Log</p>
           </div>
-          <button class="my-4 bg-blue-600 px-6 rounded-lg text-white h-10">
+          <button id="clear-history" class="my-4 bg-blue-600 px-6 rounded-lg text-white h-10">
             Clear History
           </button>
         </div>
         <hr class="border-t-2 border-dotted border-slate-300 my-2" />
+        <div id="history-container"></div>
       </div>
     </main>
 

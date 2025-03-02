@@ -24,3 +24,15 @@ function updatePoint() {
     window.location.href = "./blogs.html"
 })
 
+function addHistory(){
+  const historyContainer = document.getElementById("history-container"); 
+  const p = document.createElement("p");
+  const currentTime = new Date().toLocaleString(); 
+  const task =document.getElementById("task-name").innerText;
+  p.innerText = `Completed "${task}" at ${currentTime}`; 
+  p.classList.add("p-2", "text-sm", "text-gray-700", "mx-2"); 
+
+  historyContainer.appendChild(p);
+}
+
+
