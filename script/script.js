@@ -13,6 +13,9 @@ function updatePoint() {
       let button = event.target;
       button.disabled = true;
       button.style.backgroundColor = "gray";
+      if (taskValueToNumber===0){
+        alert("Congrats!!! You have completed all the current task");
+      }
     }
   }
 
@@ -20,3 +23,4 @@ function updatePoint() {
   document.getElementById("blogs-page").addEventListener("click",function(){
     window.location.href = "./blogs.html"
 })
+
