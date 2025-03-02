@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="blogs.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-200 min-h-screen poppins">
+    <header class="pt-8">
+      <!-- nav left -->
+      <div class="w-[80%] mx-auto bg-white p-4 rounded-xl flex justify-between">
+        <div class="flex h-[50px] items-center space-x-2">
+          <img class="" src="./assets/logo.png" />
+          <div class="text-4xl top-[6px] relative">
+            Dev<span class="font-bold">Board</span>
+          </div>
+        </div>
+        <!-- nav right -->
+        <button id="home-page" class="bg-blue-800 px-6 rounded-lg text-white">
+          Back to Desk
+        </button>
+      </div>
+    </header>
+    <main class="w-[80%] mx-auto">
+      <h1 class="text-center font-bold text-3xl py-6">Blogs</h1>
+      <!-- questions -->
+       <!-- 1st ques -->
+      <div class="bg-white p-4 rounded mb-4">
+        <p class="font-bold">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </p>
+        <hr class="border-t-2 border-dotted border-slate-400 my-2" />
+        <p>
+          The ways to select an element in the Dom are getElementById("id")
+          selects an element by its unique ID, getElementsByClassName("class")
+          selects an element by its class name, getElementsByTagName("tag")
+        selects an element by its Tagname, querySelector("selector") selects the first element that matches a CSS selector, and querySelectorAll("selector")
+         selects all elements that match a CSS selector.
+        </p>
+      </div>
+      <!-- 2nd ques -->
+      <div class="bg-white p-4 rounded mb-4">
+        <p class="font-bold">
+            Question-2: What is the difference between innerHTML, innerText, and textContent ?
+        </p>
+        <hr class="border-t-2 border-dotted border-slate-400 my-2" />
+        <p>
+            The difference between innerHTML, innerText, and textContent is that innerHTML 
+            gets or sets the HTML inside an element, it includes tags. 
+            innerText gets only the visible text inside an element, ignoring hidden elements 
+            and formatting it like how it appears on the page. textContent gets or sets all text inside 
+            an element, including hidden ones.
+        </p>
+      </div>
+      <!-- 3rd ques -->
+      <div class="bg-white p-4 rounded mb-4">
+        <p class="font-bold">
+            Question-3: What is event delegation in the DOM?
+        </p>
+        <hr class="border-t-2 border-dotted border-slate-400 my-2" />
+        <p>
+            Event delegation is when instead of adding event listeners to multiple child elements, 
+            we add a single event listener to a parent element and use event bubbling to detect 
+            which child was clicked. 
+            It’s useful for dynamically added elements and improves performance when handling many elements.
+        </p>
+      </div>
+      <!-- 4th ques -->
+      <div class="bg-white p-4 rounded mb-4">
+        <p class="font-bold">
+            Question-4: What is event bubbling in the DOM?
+        </p>
+        <hr class="border-t-2 border-dotted border-slate-400 my-2" />
+        <p>
+            Event bubbling is when an event triggered on a child element propagates up 
+            to its parent and then further up the DOM tree. If you click a button inside a div, 
+            the event first runs on the button, then on the div, then on the body, and so on. 
+            This can be useful but sometimes needs to be stopped with event.stopPropagation().
+        </p>
+      </div>
+      <!-- 5th ques -->
+      <div class="bg-white p-4 rounded">
+        <p class="font-bold">
+            Question-5: How do you create, add, and remove elements using JavaScript?
+        </p>
+        <hr class="border-t-2 border-dotted border-slate-400 my-2" />
+        <p>
+            We can create elements using document.createElement("tag"), add them using 
+            appendChild(), append(), insertBefore(), and remove them using removeChild() or element.remove().
+        </p>
+      </div>
+    </main>
+    <script>
+        document.getElementById("home-page").addEventListener("click",function(){
+            window.location.href = "./index.html"
+        })
+    </script>
+  </body>
+</html>
