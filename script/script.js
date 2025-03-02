@@ -9,5 +9,14 @@ function updatePoint() {
       readValueToNumber += 1;
       task.innerText = taskValueToNumber;
       read.innerText = readValueToNumber;
+      alert("Board updated Successfully");
+      let button = event.target;
+      button.disabled = true;
+      button.style.backgroundColor = "gray";
     }
   }
+
+  // redirecting from home page
+  document.getElementById("blogs-page").addEventListener("click",function(){
+    window.location.href = "./blogs.html"
+})
