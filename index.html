@@ -95,7 +95,7 @@
               <div class="shop-name bg-white w-min p-1 rounded-lg">
                 ShopEase
               </div>
-              <div id="task-name" class="card-title py-2">Fix Mobile Button Issue</div>
+              <div id="Mobile-button" class="card-title py-2">Fix Mobile Button Issue</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Ensure the button is visible, clickable, properly styled, has touch support,
                  and is not blocked by elements.
@@ -107,7 +107,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="mobile-button"
-                  onclick="updatePoint(); addHistory();" 
+                  onclick="updatePoint(); addHistory('Mobile-button');" 
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -120,7 +120,7 @@
               <div class="shop-name bg-white w-min p-1 rounded-lg">
                 CloudSync
               </div>
-              <div class="card-title py-2">Add Dark Mode</div>
+              <div id="Dark-mode" class="card-title py-2">Add Dark Mode</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Toggle a dark class on body, update styles, store preference in localStorage, 
                 and apply on load.
@@ -132,7 +132,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="dark-mode"
-                  onclick="updatePoint(); addHistory();"
+                  onclick="updatePoint(); addHistory('Dark-mode');"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -145,7 +145,7 @@
               <div class="shop-name bg-white w-min p-1 rounded-lg">
                 SwiftPay
               </div>
-              <div class="card-title py-2">Optimize Home page</div>
+              <div id="home-page" class="card-title py-2">Optimize Home page</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Minimize assets, lazy-load images, optimize CSS/JS, improve caching, enhance responsiveness, 
                 and prioritize above-the-fold content.
@@ -157,7 +157,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="optimize-home-page"
-                  onclick="updatePoint(); addHistory();"
+                  onclick="updatePoint(); addHistory('home-page');"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -170,7 +170,7 @@
               <div class="shop-name bg-white w-min p-1 rounded-lg">
                 Meta
               </div>
-              <div class="card-title py-2">Add new emoji🤲</div>
+              <div id="add-emoji" class="card-title py-2">Add new emoji🤲</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Submit a proposal to Unicode, get approval, wait for release, 
                 then platforms adopt and users access it.
@@ -182,7 +182,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="add-emoji"
-                  onclick="updatePoint(); addHistory();"
+                  onclick="updatePoint(); addHistory('add-emoji');"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -195,7 +195,7 @@
               <div class="shop-name bg-white w-fit p-1 rounded-lg">
                 Google LLC
               </div>
-              <div class="card-title py-2">Integrate OpenAI API</div>
+              <div id="integrate-ai" class="card-title py-2">Integrate OpenAI API</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Obtain API key, install OpenAI SDK, send requests, handle responses, optimize usage,
                  and ensure security measures.
@@ -207,7 +207,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="integrate-api"
-                  onclick="updatePoint(); addHistory();"
+                  onclick="updatePoint(); addHistory('integrate-ai');"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -220,7 +220,7 @@
               <div class="shop-name bg-white w-min p-1 rounded-lg">
                 Glassdoar
               </div>
-              <div class="card-title py-2">Improve Job Searching</div>
+              <div id="improve-searching" class="card-title py-2">Improve Job Searching</div>
               <p class="bg-white h-14 line-clamp-2 px-4 py-2 my-2 rounded-lg">
                 Optimize resume, tailor applications, network effectively, use job boards, 
                 enhance skills, and follow up consistently.
@@ -232,7 +232,7 @@
                   <div>21 March 2025</div>
                 </div>
                 <button id="improve-searching"
-                  onclick="updatePoint(); addHistory();"
+                  onclick="updatePoint(); addHistory('improve-searching');"
                   class="bg-blue-600 px-6 rounded-lg text-white h-10"
                 >
                   Completed
@@ -257,44 +257,6 @@
         <div id="history-container"></div>
       </div>
     </main>
-
     <script src="./script/script.js"></script>
-    <script>
-      //   function updatePoint() {
-      //     let task = document.getElementById("task");
-      //     let read = document.getElementById("read");
-      //     let taskValueToNumber = parseInt(task.innerText);
-      //     let readValueToNumber = parseInt(read.innerText);
-      //     if (taskValueToNumber > 0) {
-      //       taskValueToNumber -= 1;
-      //       readValueToNumber += 1;
-      //       task.innerText = taskValueToNumber;
-      //       read.innerText = readValueToNumber;
-      //     }
-      //   }
-
-      // theme changing
-      let themeButton = document.getElementById("theme-changer");
-      themeButton.addEventListener("click", function () {
-        const body = document.body;
-        let randomColor = `#${Math.floor(Math.random() * 12345678).toString(
-          16
-        )}`;
-        body.style.backgroundColor = randomColor;
-      });
-
-
-      // the time part
-      const date = new Date();
-      const day = date.toLocaleDateString('en-US', { weekday: 'short' }); 
-      const month = date.toLocaleDateString('en-US', { month: 'short' }); 
-       const dayNum = date.getDate(); 
-       const year = date.getFullYear();
-
-
-      document.getElementById("day-part").innerText = `${day} ,`;
-      document.getElementById("date-part").innerText = `${month} ${dayNum} ${year}`;
-
-    </script>
   </body>
 </html>

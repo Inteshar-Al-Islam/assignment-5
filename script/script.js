@@ -24,11 +24,11 @@ function updatePoint() {
     window.location.href = "./blogs.html"
 })
 
-function addHistory(){
+function addHistory(ID){
   const historyContainer = document.getElementById("history-container"); 
   const p = document.createElement("p");
   const currentTime = new Date().toLocaleString(); 
-  const task =document.getElementById("task-name").innerText;
+  const task =document.getElementById(ID).innerText;
   p.innerText = `Completed "${task}" at ${currentTime}`; 
   p.classList.add("p-2", "text-sm", "text-gray-700", "mx-2"); 
 
@@ -40,3 +40,23 @@ document.getElementById("clear-history").addEventListener("click", function() {
   historyContainer.innerHTML = "";
 });
 
+      // theme changing
+      let themeButton = document.getElementById("theme-changer");
+      themeButton.addEventListener("click", function () {
+        const body = document.body;
+        let randomColor = `#${Math.floor(Math.random() * 12345678).toString(
+          16
+        )}`;
+        body.style.backgroundColor = randomColor;
+      });
+
+      // the time part
+      const date = new Date();
+      const day = date.toLocaleDateString('en-US', { weekday: 'short' }); 
+      const month = date.toLocaleDateString('en-US', { month: 'short' }); 
+       const dayNum = date.getDate(); 
+       const year = date.getFullYear();
+
+
+      document.getElementById("day-part").innerText = `${day} ,`;
+      document.getElementById("date-part").innerText = `${month} ${dayNum} ${year}`;
